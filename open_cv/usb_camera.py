@@ -60,8 +60,8 @@ while True:
     cv2.imwrite(str(i)+'.jpg',image)
     print('Save Image...' + str(i) + '.jpg')
     print('認識しました')
-    time.sleep(3)           # 連続で認識しないように待機
-    # continue               # 待機だと重いのでこっちのほうが良い？
+    time.sleep(3)           # 連続で認識しないように待機、ただし画面も固まる
+    # continue               # 待機だと重いのでこっちのほうが良い？あってもなくても変わらん
 
     cv2.imshow('USB_Camera Test',image)
 
