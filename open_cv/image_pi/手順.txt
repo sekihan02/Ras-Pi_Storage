@@ -1,3 +1,14 @@
+いかのファイルをopencv-2.4.11の中からカレントディレクトリにコピーして使った
+opencv_calib3d2411.dll
+opencv_core2411.dll
+opencv_features2d2411.dll
+opencv_flann2411.dll
+opencv_highgui2411.dll
+opencv_imgproc2411.dll
+opencv_ml2411.dll
+opencv_objdetect2411.dll
+opencv_createsamples.exe
+opencv_traincascade.exe
 
 集めた正解画像を1つのベクトルファイルにする
 opencv_createsamples.exe -img ./pos/ooo.jpg -vec ./vec/ooo.vec -num 50 -bgcolor 255 -maxidev 40 -maxxangle 0.8 -maxyangle 0.8 -maxzangle 0.5 -show
