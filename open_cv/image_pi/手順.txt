@@ -1,0 +1,15 @@
+
+集めた正解画像を1つのベクトルファイルにする
+opencv_createsamples.exe -img ./pos/ooo.jpg -vec ./vec/ooo.vec -num 50 -bgcolor 255 -maxidev 40 -maxxangle 0.8 -maxyangle 0.8 -maxzangle 0.5 -show
+
+正解画像と区別させたい画像を用意する。
+不正解画像をnegフォルダへ保存していき、不正解画像のリストファイルを作成します。
+
+リストファイルの作り方
+コマンドプロンプトでnegフォルダまで移動し、
+下記コマンドで簡単にリストファイルが生成
+
+dir *.jpg /b > nglist.txt
+
+実行！
+opencv_traincascade.exe -data ./cascade/ooo/ -vec ./vec/ooo.vec -bg ./neg/nglist.txt -numPos 40 -numNeg 20
